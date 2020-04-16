@@ -1,0 +1,226 @@
+/* 共用部分 */
+body , p {
+  /* min-width: 1920px; */
+  font-family: 微軟正黑體, "Microsoft JhengHei", Arial;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 80px;
+  line-height: 90px;
+  color: #000;
+  font: Regular 80px/90px Andale Mono;
+}
+h2 {
+  font-size: 32px;
+  color: #000;
+  line-height: 45px;
+  font-weight: bold;
+  display: inline-block;
+}
+.title-en {
+  color: #A00404;
+  font-size: 24px;
+  line-height: 32px;
+  margin-left: 16px;
+  font-weight: bold;
+}
+.title-bottom-line {
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+}
+.mb-72 {
+  margin-bottom: 72px;
+}
+/* 個人資料&學歷區塊 */
+.photo {
+  margin: 48px 0;
+}
+.title-bottom-line h1 {
+  margin-top: 48px;
+}
+.personal .edu {
+  line-height: 35px;
+  font-size: 24px;
+  margin: 16px 0 24px 48px;
+  position: relative;
+}
+.personal .edu::before {
+  content: " "; /*要有這個內容才有東西出來*/
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -32px;
+  top: 10px;
+  background: #96A9C4;
+  border-radius: 50%;
+}
+/*before 是加在區塊前面*/
+.personal .exp ,.school{
+  line-height: 36px;
+  font-size: 24px;
+  margin-left: 48px;
+}
+
+
+.item-wrap {
+  box-sizing: border-box;
+}
+
+.school {
+  margin-top: 16px;
+}
+.school li:first-child {
+  margin-bottom: 32px;
+}
+.school-item {
+  position: relative;
+}
+.school-item:before{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #96A9C4;
+  border-radius: 50%;
+  left: -32px;
+  top: 11px;
+}
+.time-line:after{
+  content: "";
+  position: absolute;
+  border-left: 1px solid #96A9C4;
+  top: 24px;
+  bottom: 0px;
+  left: -24px;
+  height: 60px;
+}
+
+/* 技能區塊 */
+.skill-warp {
+  padding: 67px 0;
+}
+.skill-warp .title-bottom-line h2,
+.skill-warp .title-bottom-line span {
+  color: #fff;
+}
+.skill-bg {
+  background: #96A9C4;
+  opacity: 1;
+  height: 360px;
+  position: relative;
+}
+.skill-warp .title-bottom-line {
+  margin: 0 102px;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+}
+.skill-content {
+  position: absolute;
+  width: 1200px;
+  background: #415165;
+  opacity: 1;
+  left: 50%;
+  margin-left: -600px;    /*有做position的因為他是浮動的，所以可以正負調整*/
+  top: -67px;
+  height: 414.5px;
+  color: #fff;
+  padding: 24px 0 55.5px;
+}
+/*position 置中方法:
+在沒有限制最小寬度下，例如：min-width: 1920px 先給予 position 寬度(1200px)後，往左推 50% (left: 50%;) 因為畫面會往右跑所以要還他600px 要用負值推回來*/
+/*有padding高度，原先的高要減掉padding的高 margin不用*/
+.skills-ul {
+  color: #fff;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 40px auto;
+  padding-left: 23px;
+  width: 216px;
+  border-left: 1px solid #96A9C4;
+  
+}
+/*margin是區塊的外面,padding是區塊裡面*/
+.skills-ul li {
+  margin-bottom: 16px;
+}
+/* 區塊置中要給寬 */
+
+
+/* 工作經驗區塊 */
+
+.container-design {
+  font-size: 24px;
+  line-height: 36px;
+  margin-top: 22px;
+  padding-bottom: 8px;
+  font-weight: bold;
+
+}
+
+.container-work-experience {
+  border-left: 1px solid #96A9C4;
+  padding-left: 24px;
+  margin-left: 24px;
+
+}
+
+.container-work-experience .college img {
+  text-align: left;
+}
+
+.container-work-experience p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 8.15px;
+
+
+}
+
+
+/* Footer 區塊 */
+.connection-wrap {
+  background: #415165 0% 0% no-repeat padding-box;
+  height: 329px;
+  padding: 24px 0 48px;
+}
+.connection-wrap .title-bottom-line {
+  border-bottom: 1px solid #fff;
+  text-align: center;
+}
+.connection-wrap h2,
+.connection-wrap span {
+  color: #fff;
+}
+.connection  {
+  padding-top: 16px;
+}
+.connection div {
+  font-size: 24px;
+  color: #fff;
+  font-family: 微軟正黑體, "Microsoft JhengHei", Arial;
+  text-align: center;
+  line-height: 33px;
+  margin-top: 16px;
+}
+.social-media {
+  text-align: center;
+  padding-top: 16px;
+}
+.social-media img {
+  margin-right: 24px; 
+  display: inline-block;
+}
+.social-media img:last-child { /* css選擇器共同標籤的最後一個，最後一個圖片不用往右推 */
+  margin-right: 0;
+}
+/*
+  img:nth-child(2) { 第2個
+    ...
+  }
+  img:first-child { 最先個(第1個)
+    ...
+  }
+*/
